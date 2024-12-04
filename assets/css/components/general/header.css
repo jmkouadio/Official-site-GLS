@@ -1,0 +1,173 @@
+/***************** BANNER PROMO****************/
+.banner-promo-container{
+    
+    background-color: var(--main-color);
+    color: var(--main-color-white);
+}
+
+.banner-promo{
+    
+    line-height: 30px;
+    font-size: 1.3rem;
+}
+
+.banner-promo span{
+    border: 1px solid var(--main-color-white);
+    cursor: pointer;
+    padding: 5px;
+}
+
+/***************** NAV TOP ****************/
+.nav-top-container{
+    border-bottom: 1px solid var(--main-color-gray);
+}
+.nav-top{
+    color:var(--main-color-gray);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.nav-top .nav-message{
+    text-transform: uppercase;
+}
+
+.nav-top ul li a:hover{
+    color: var(--main-color);
+}
+
+
+/***************** WEBSITE DETAILS ****************/
+.website-details{
+
+    border-bottom: 0.1px solid var(--main-color-gray);
+}
+
+.website-details .menu{
+    font-size: 2rem;
+    color: var(--main-color);
+    display: none;
+}
+
+.website-search-bar{
+    height: 50px;
+    
+}
+
+
+.website-details{
+    margin: 0 30px;
+}
+
+.website-details #img-not{
+    display: none;
+}
+
+
+
+.website-details .search-icon{
+    color: var(--main-color-white);
+    width: 50px;
+    background-color: var(--main-color-white);
+    border-radius: 0 50px 50px 0;
+    border-left: 1px solid var(--main-color-white);
+}
+
+.website-details .search-icon :hover{
+    color: var(--main-color-white);
+}
+
+.website-details .website-call-us{
+    height: 50px;
+}
+
+.website-details .website-call-us .call-icon i, .website-search-icon i{
+    font-size: 2rem;
+}
+
+.website-details .website-call-us .call-message h3{
+    margin: 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--main-color-gray);
+}
+.website-details .website-call-us .call-message a{
+    font-weight: bold;
+}
+
+
+/***************** RESPONSIVE ****************/
+@media screen and (max-width:1200px) {
+    .nav-items{
+        display: none;
+    }
+
+    .website-logo{
+        min-width: auto;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .website-search-bar{
+        display: none;
+    }
+
+    .website-details{
+        justify-content: space-between;
+        margin: 0 30px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .nav-message{
+        font-size: 0.7rem;
+    }
+
+    .website-call-us, .website-search-icon{
+        display: none;
+    }
+
+    .website-details{
+        padding: 0 5px;
+       
+    }
+
+
+
+    .website-details #img-not{
+        display: block;
+    }
+
+    .website-details .menu{
+        display: block;
+        margin-top: -35px;
+        
+    }
+
+    .logo h2 a{
+        margin: 5px 0;
+    }
+
+    .logo h2{
+        margin: 0;
+    }
+
+    .nav-top{
+        padding: 5px;
+    }
+
+    .banner-promo{
+        font-size: 1rem;
+    }
+
+   
+}
+@media screen and (max-width:576px) {
+    .nav-message{
+        font-size: 0.5rem;
+    }
+}
+@media screen and (max-width:427px) {
+    .nav-message{
+        display: none;
+    }
+}

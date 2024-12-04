@@ -1,0 +1,51 @@
+.promo-icon{
+    width: 50px;
+}
+.promo-icon i{
+    color: var(--main-color);
+    font-size: 1.8rem;
+}
+
+.promo-item{
+    min-width: 300px;
+}
+
+.promo-item .promo-header{
+    height: 100px;
+}
+.promo-item .promo-details h3{
+    font-size: 1rem;
+}
+
+.promo-image img{
+    width: 300px;
+}
+
+/***************** RESPONSIVE ****************/
+
+@media screen and (max-width:992px) {
+    .promo-item{
+        min-width: auto;
+        margin-right: 10px;
+    }
+ }
+ 
+ @media screen and (max-width:768px) {
+   
+    .promo-container{
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+   }
+   
+   .promo-item{
+    margin-bottom: 10px;
+   }
+ }
+ @media screen and (max-width:576px) {
+    
+ }
+ @media screen and (max-width:427px) {
+    
+ }
+ 

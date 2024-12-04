@@ -1,0 +1,271 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Jstore Ecommerce</title>
+</head>
+
+<body>
+    <header>
+        <div class="banner-promo-container tc aic">
+            <div class="container">
+                <div class="banner-promo py-15">
+                    <i class="fa-solid fa-phone"></i> <a href="tel:+2250758904284">+2250758904284</a> |
+                    Sécurisez vos espaces avec des solutions de surveillance avancées |
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="website-details-container ">
+            <div class="container">
+                <div class="website-details aic flex gap-10">
+                    <h2 id="responsiveContent"><a href="#">GLS</a></h2>
+                    <div class="website-logo logo">
+                        <h2><i class="fa-solid fa-bars menu"></i></h2>
+                    </div>
+                    <div class="website-search-bar flex flex-1 px-20">
+                        <input type="search" name="product_filter" id="product_filter"
+                            placeholder="                         Votre satisfaction est notre plus grand désir"
+                            readonly class="flex-1">
+
+                        <div class="search-icon flex aic jcc">
+                            <i class="fa-solid fa-handshake-simple"></i>
+                        </div>
+                    </div>
+                    <div class="website-call-us flex aic gap-10">
+                        <div class="call-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="call-message">
+                            <h3>Call Us Now</h3>
+                            <a href="tel:+2250758904284">+2250758904284</a>
+                        </div>
+                    </div>
+                    <div class="website-search-icon flex gap-10">
+                        <div class="website-icon-item">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div class="website-icon-item">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
+                        <div class="website-icon-item">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="website-icon-item">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="nav-container flex jcsb">
+                <div class="nav-left">
+                    <ul class="flex gap-10">
+                        <li><a href="index.html"><img src="logo gls90.png" alt=""></a></li>
+                        <li><a href="index.html">HOME</a></li>
+
+                        <li class="relative">
+                            <a href="">SERVICES <i class="fa-solid fa-chevron-down"></i></a>
+                            <div class="mega-sub-menu absolute flex box">
+                                <div class="mega-item">
+                                    <h3>Nos services</h3>
+                                    <ul>
+                                        <li><a href="">vidéosurveillance</a></li>
+                                        <li><a href="">Contrôle d'accès</a></li>
+                                        <li><a href="">Alarme ainti-intrusion</a></li>
+                                        <li><a href="">Cloture électrique</a></li>
+                                        <li><a href="">Motorisation de portail</a></li>
+                                        <li><a href="">Formation</a></li>
+                                        <li><a href="">Sous menu mega</a></li>
+                                        <li><a href="">Sous menu mega</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="mega-item relative">
+                                    <img src="assets/images/imgsite/controle4.png" alt="">
+
+                                    <button class="btn absolute devis"><a href="">Dévis gratuit</a></button>
+                                </div>
+                                <div class="mega-item relative">
+                                    <div class="mega-item-content absolute">
+                                        <span>Client</span>
+                                        <div>
+                                            <h4>satisfait</h4>
+                                            <h3>90%</h3>
+                                        </div>
+
+                                    </div>
+                                    <img src="assets/images/imgsite/hik3.jpg" alt="">
+
+                                </div>
+                            </div>
+                        </li>
+
+                        <li><a href="">BLOG</a></li>
+                        <li><a href="">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <ul>
+
+                        <li><a class="active" href="">DEVIS GRATUIT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <section>
+        <form id="contactForm" class="contact-form">
+            <div class="form-group">
+                <label for="ville">Ville *</label>
+                <select id="ville" name="ville" required>
+                    <option value="">Sélectionnez une ville</option>
+                    <option value="Abidjan">Abidjan</option>
+                    <option value="Bouaké">Bouaké</option>
+                    <option value="Yamoussoukro">Yamoussoukro</option>
+                    <option value="Daloa">Daloa</option>
+                    <option value="Korhogo">Korhogo</option>
+                    <option value="San-Pédro">San-Pédro</option>
+                    <option value="Man">Man</option>
+                    <option value="Divo">Divo</option>
+                    <option value="Gagnoa">Gagnoa</option>
+                    <option value="Abengourou">Abengourou</option>
+                    <option value="Grand-Bassam">Grand-Bassam</option>
+                    <option value="Dabou">Dabou</option>
+                    <option value="Bouaflé">Bouaflé</option>
+                    <option value="Issia">Issia</option>
+                    <option value="Sinfra">Sinfra</option>
+                    <option value="Katiola">Katiola</option>
+                    <option value="Boundiali">Boundiali</option>
+                    <option value="Ferkessédougou">Ferkessédougou</option>
+                    <option value="Dimbokro">Dimbokro</option>
+                    <option value="Odienné">Odienné</option>
+                </select>
+                <span class="error-message"></span>
+            </div>
+        
+            <div class="form-group">
+                <label for="name">Nom complet *</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error-message"></span>
+            </div>
+        
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message"></span>
+            </div>
+        
+            <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <span class="error-message"></span>
+            </div>
+        
+            <button type="submit" id="submitBtn">Envoyer</button>
+        </form>
+    </section>
+    <footer class="py-30">
+        <div class="container">
+            <div class="footer-content flex jcsb">
+                <div class="footer-list">
+                    <h2>Contact info</h2>
+                    <div class="footer-item">
+                        <h4>Adresse :</h4>
+                        <p>City name abidjan</p>
+                    </div>
+                    <div class="footer-item">
+                        <h4>Tel :</h4>
+                        <p><a href="tel:+2250758904284">0758904284</a></p>
+                    </div>
+                    <div class="footer-item">
+                        <h4>Email :</h4>
+                        <p><a href="mailto:kkjm.lgb@gmail.com">kkjm.lgb@gmail.com</a></p>
+                    </div>
+                    <div class="footer-item">
+                        <h4>Works day hours :</h4>
+                        <p>Monday-sunday 08 AM - 07 PM</p>
+                    </div>
+                </div>
+
+                <div class="footer-list">
+                    <h2>Custom service</h2>
+                    <ul>
+                        <li class="custom-service-item"><a href="">Achat</a></li>
+                        <li class="custom-service-item"><a href="">Ventes</a></li>
+                        <li class="custom-service-item"><a href="">Order</a></li>
+                        <li class="custom-service-item"><a href="">Panier</a></li>
+                        <li class="custom-service-item"><a href="">Faq</a></li>
+                        <li class="custom-service-item"><a href="">Achat</a></li>
+                        <li class="custom-service-item"><a href="">Ventes</a></li>
+                        <li class="custom-service-item"><a href="">Order</a></li>
+                        <li class="custom-service-item"><a href="">Panier</a></li>
+                        <li class="custom-service-item"><a href="">Faq</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-list">
+                    <h2>Contact info</h2>
+                    <div class="footer-item">
+                        <h4>Adresse :</h4>
+                        <p>City name abidjan</p>
+                    </div>
+                    <div class="footer-item">
+                        <h4>Tel :</h4>
+                        <p><a href="tel:+2250758904284">0758904284</a></p>
+                    </div>
+                    <div class="footer-item">
+                        <h4>Email :</h4>
+                        <p><a href="mailto:kkjm.lgb@gmail.com">kkjm.lgb@gmail.com</a></p>
+                    </div>
+                    <div class="footer-item">
+                        <h4>Works day hours :</h4>
+                        <p>Monday-sunday 08 AM - 07 PM</p>
+                    </div>
+                </div>
+
+                <div class="footer-list">
+                    <h2>Contact info</h2>
+                    <div class="footer-item">
+                        <h4>Adresse :</h4>
+                        <p>City name abidjan</p>
+                    </div>
+                    <div class="footer-item">
+                        <h4>Tel :</h4>
+                        <p><a href="tel:+2250758904284">0758904284</a></p>
+                    </div>
+                    <div class="footer-item">
+                        <h4>Email :</h4>
+                        <p><a href="mailto:kkjm.lgb@gmail.com">kkjm.lgb@gmail.com</a></p>
+                    </div>
+                    <div class="footer-item">
+                        <h4>Works day hours :</h4>
+                        <p>Monday-sunday 08 AM - 07 PM</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom"></div>
+        </div>
+    </footer>
+
+</body>

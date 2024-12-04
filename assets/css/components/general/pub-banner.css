@@ -1,0 +1,58 @@
+.pub-banner-container .container .title{
+    text-align: center;
+    text-transform: uppercase;
+}
+.pub-item{
+    width: 300px;
+    text-align: center;
+}
+
+.pub-item-icon{
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+    border: 2px solid var(--main-color-orange);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color-orange);
+}
+
+.pub-item-icon i{
+    font-size: 2rem;
+    color: var(--main-color-white);
+}
+
+.pub-item-title{
+    font-size: 1.2rem;
+}
+
+.pub-item-title h2{
+    font-size: 18px;
+}
+
+
+/***************** RESPONSIVE ****************/
+
+@media screen and (max-width:768px) {
+    .pub-banner{
+        flex-direction: column;
+       }
+
+  
+
+    .pub-item{
+        width: 90%;
+        margin: 0 auto;
+    }
+  
+}
+
+@media screen and (max-width:400px) {
+
+    .pub-banner-container .title{
+        font-size: 1rem;
+    }
+  
+}

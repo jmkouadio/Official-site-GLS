@@ -1,0 +1,23 @@
+/* Pour les navigateurs basés sur Chromium (Chrome, Edge) */
+/* Couleur de la barre de défilement */
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color-orange); /* Couleur de la barre de défilement */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fffaf3; /* Couleur de la piste de la barre de défilement */
+}
+
+/* Pour Firefox */
+/* Couleur de la barre de défilement */
+* {
+    scrollbar-color: var(--main-color-orange) #fffaf3; /* Couleur de la barre de défilement et de la piste */
+}
+
+/* Pour Internet Explorer 11 */
+/* Ces styles ne sont pas standardisés et peuvent ne pas fonctionner dans tous les cas */
+* {
+    scrollbar-face-color: var(--main-color-orange); /* Couleur de la barre de défilement */
+    scrollbar-shadow-color: #fffaf3; /* Couleur de l'ombre de la barre de défilement */
+}

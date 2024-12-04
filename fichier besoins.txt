@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.section-services .header-section {
+    margin-bottom: 34px;
+}
+
+.section-services .header-section .title {
+    position: relative;
+    padding-bottom: 14px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.section-services .header-section .title:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 3px;
+}
+
+.section-services .header-section .title:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(30px);
+    width: 10px;
+    height: 3px;
+    background-color: #504f93;
+    border-radius: 3px;
+}
+
+.section-services .header-section .description {
+    font-size: 70px;
+    color: #d01010;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.section-services .single-service {
+    position: relative;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px 30px;
+    overflow: hidden;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.section-services .single-service .content {
+    position: relative;
+    z-index: 1;
+}
+
+.section-services .single-service .circle-before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(40%, -40%);
+    width: 150px;
+    height: 150px;
+    background-color: #1b365f;
+    border: 6px solid #fb911f;
+    border-radius: 50%;
+    transition: all .6s;
+}
+
+.section-services .single-service:hover .circle-before {
+    width: 100%;
+    height: 100%;
+    transform: none;
+    border: 0;
+    border-radius: 0;
+    opacity: 1;
+}
+
+.section-services .single-service .icon {
+    display: inline-block;
+    margin-bottom: 26px;
+    width: 70px;
+    height: 70px;
+    background-color: #1b365f;
+    border-radius: 5px;
+    line-height: 70px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    transition: all .3s;
+}
+
+.section-services .single-service:hover .icon {
+    background-color: #fff;
+    color: #1b365f;
+    font-weight: 800;
+}
+
+.section-services .single-service .title {
+    margin-bottom: 18px;
+    font-weight: 800;
+    font-size: 23px;
+    transition: color .3s;
+    color: #fb911f;
+}
+
+.section-services .single-service:hover .title {
+    color: #fff;
+}
+
+.section-services .single-service .description {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    transition: color .3s;
+}
+
+.section-services .single-service:hover .description {
+    color: #fff;
+}
+
+.section-services .single-service a {
+    position: relative;
+    font-size: 18px;
+    color: #202020;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color .3s;
+}
+
+.section-services .single-service:hover a {
+    color: #fff;
+}
+
+.section-services .single-service a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #000000;
+    transition: background-color .3s;
+}
+
+.section-services .single-service:hover a:after {
+    background-color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<section class="section-services">
+    <div class="container">
+        <div class="text-center">
+            <div class="header-section">
+                <h2 class="title reveal">NOS SERVICES</h2>
+            </div>
+        </div>
+        
+        <div class="services-grid">
+            <div class="single-service">
+                <div class="content">
+                    <span class="icon">GLS</span>
+                    <h3 class="title">VIDEOSURVEILLANCE</h3>
+                    <p class="description">
+                        La vidéosurveillance est essentielle pour mieux comprendre ce qui se passe et réagir correctement.
+                        Analysez tout sinistre pour trouver les bonnes actions correctives et vous protéger en cas de litige salarié/client/fournisseur. 
+                        Si l'alarme se déclenche...
+                    </p>
+                    <a href="pages/camera.html">Lire plus</a>
+                </div>
+                <span class="circle-before"></span>
+            </div>
+
+            <div class="single-service">
+                <div class="content">
+                    <span class="icon">GLS</span>
+                    <h3 class="title">ALARME ANTI-INTRUSION</h3>
+                    <p class="description">
+                        Ne laissez pas une intrusion ruiner votre activité.
+                        Limitez le temps de présence des personnes malveillantes pour réduire fortement le préjudice en cas d'intrusion.
+                        Soyez alerté en cas d'intrusion pour réagir efficacement et limiter les dégâts. 
+                        La sonnerie d'une alarme fait fuir...
+                    </p>
+                    <a href="pages/antiintrusion.html">Lire plus</a>
+                </div>
+                <span class="circle-before"></span>
+            </div>
+
+            <div class="single-service reveal">
+                <div class="content">
+                    <span class="icon">GLS</span>
+                    <h3 class="title">CLÔTURE ELECTRIQUE</h3>
+                    <p class="description">
+                        Les clôtures électriques incarnent une frontière moderne entre sécurité renforcée et dissuasion efficace. 
+                        Conçues pour décourager toute tentative d'intrusion, ces barrières intelligentes sont devenues un élément essentiel dans la protection des propriétés...
+                    </p>
+                    <a href="pages/cloture.html">Lire plus</a>
+                </div>
+                <span class="circle-before"></span>
+            </div>
+
+            <div class="single-service reveal">
+                <div class="content">
+                    <span class="icon">GLS</span>
+                    <h3 class="title">MOTORISATION DE PORTAIL</h3>
+                    <p class="description">
+                        La motorisation de portail représente une révolution dans la gestion de l'accès à votre propriété, offrant une série d'avantages qui allient praticité, sécurité et confort. Cette technologie moderne transforme votre quotidien
+                        et renforce la protection de votre domicile de manière significative.
+                        L'un des principaux avantages de la motorisation de portail est la commodité.
+                    </p>
+                    <a href="pages/motorisation.html">Lire plus</a>
+                </div>
+                <span class="circle-before"></span>
+            </div>
+
+            <div class="single-service reveal">
+                <div class="content">
+                    <span class="icon">GLS</span>
+                    <h3 class="title">CONTRÔLE D'ACCES</h3>
+                    <p class="description">
+                        Gérez facilement les droits d'accès des employés, intérimaires, visiteurs, prestataires…
+                        Supprimez les problèmes liés aux clés. Par exemple, une clé perdue peut devenir un vrai cauchemar de sécurité.
+                        Personnalisez les niveaux d'accès de chaque personne (quelles portes, quels jours, quelles heures).
+                        Profitez d'un reporting et de notifications personnalisées sur l'utilisation des badges...
+                    </p>
+                    <a href="pages/controle.html">Lire plus</a>
+                </div>
+                <span class="circle-before"></span>
+            </div>
+
+            <div class="single-service reveal">
+                <div class="content">
+                    <span class="icon">GLS</span>
+                    <h3 class="title">FORMATION</h3>
+                    <p class="description">
+                        La formation continue pour les jeunes à l'installation des équipements de sécurité représente une opportunité exceptionnelle d'acquérir des compétences 
+                        essentielles dans un domaine en constante évolution. Dans un monde où la sécurité est une préoccupation majeure, être formé à l'installation de systèmes de sécurité devient non seulement pertinent mais également crucial...
+                    </p>
+                    <a href="#">Lire plus</a>
+                </div>
+                <span class="circle-before"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+function reveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    
+    reveals.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementTop < windowHeight - 100) {
+            element.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', reveal);
+reveal();
+</script>
+
+
+
+                    <i class="fa-solid fa-phone"></i> <a href="tel:+2250507208790">(+225)0507208790</a> |
+  <!-- comment 
+    <section class="promo py-15">
+        <div class="container">
+            <div class="promo-container flex py-20 gap-10">
+                <div class="promo-item flex-1">
+                    <div class="promo-header flex aic gap-10">
+                        <div class="promo-icon tc">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <div class="promo-details tc">
+                            <h3>FREE SHIPPING & RETURN</h3>
+                            <p>It is a big money of $99.99</p>
+                        </div>
+                    </div>
+                    <div class="promo-image">
+                        <img src="assets/images/imgsite/electric-fence-71378_1280.jpg" alt="">
+                    </div>
+                </div>
+                <div class="promo-item flex-1">
+                    <div class="promo-header flex aic gap-10">
+                        <div class="promo-icon tc">
+                            <i class="fa-solid fa-sack-dollar"></i>
+                        </div>
+                        <div class="promo-details tc">
+                            <h3>FREE SHIPPING & RETURN</h3>
+                            <p>It is a big money of $99.99</p>
+                        </div>
+                    </div>
+                    <div class="promo-image">
+                        <img src="assets/images/imgsite/homme vol.png" alt="">
+                    </div>
+                </div>
+                <div class="promo-item flex-1">
+                    <div class="promo-header flex aic gap-10">
+                        <div class="promo-icon tc">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <div class="promo-details tc">
+                            <h3>FREE SHIPPING & RETURN</h3>
+                            <p>It is a big money of $99.99</p>
+                        </div>
+                    </div>
+                    <div class="promo-image">
+                        <img src="assets/images/imgsite/maison-surveillance.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+
+   <!-- comment 
+<section class="section-services">
+    <div class="container">
+        <div class="text-center">
+            <div class="header-section">
+                <h2 class="title">NOS SERVICES</h2>
+            </div>
+        </div>
+        
+        <div class="services-grid">
+            <div class="single-service">
+                <div class="content">
+                    <span class="icon">GLS</span>
+                    <h3 class="title">VIDEOSURVEILLANCE</h3>
+                    <p class="description">
+                        La vidéosurveillance est essentielle pour mieux comprendre ce qui se passe et réagir correctement.
+                        Analysez tout sinistre pour trouver les bonnes actions correctives et vous protéger en cas de litige salarié/client/fournisseur. 
+                        Si l'alarme se déclenche...
+                    </p>
+                    <a href="pages/camera.html" class="learn-more">Nos services</a>
+                </div>
+                <span class="circle-before"></span>
+            </div>
+
+            <div class="single-service">
+                <div class="content">
+                    <span class="icon">GLS</span>
+                    <h3 class="title">ALARME ANTI-INTRUSION</h3>
+                    <p class="description">
+                        Ne laissez pas une intrusion ruiner votre activité.
+                        Limitez le temps de présence des personnes malveillantes pour réduire fortement le préjudice en cas d'intrusion.
+                        Soyez alerté en cas d'intrusion pour réagir efficacement et limiter les dégâts. 
+                        La sonnerie d'une alarme fait fuir...
+                    </p>
+                    <a href="pages/antiintrusion.html" class="learn-more">Nos services</a>
+                </div>
+                <span class="circle-before"></span>
+            </div>
+
+            <div class="single-service">
+                <div class="content">
+                    <span class="icon">GLS</span>
+                    <h3 class="title">CLÔTURE ELECTRIQUE</h3>
+                    <p class="description">
+                        Les clôtures électriques incarnent une frontière moderne entre sécurité renforcée et dissuasion efficace. 
+                        Conçues pour décourager toute tentative d'intrusion, ces barrières intelligentes sont devenues un élément essentiel dans la protection des propriétés...
+                    </p>
+                    <a href="pages/cloture.html" class="learn-more">Lire plus</a>
+                </div>
+                <span class="circle-before"></span>
+            </div>
+
+            <div class="single-service">
+                <div class="content">
+                    <span class="icon">GLS</span>
+                    <h3 class="title">MOTORISATION DE PORTAIL</h3>
+                    <p class="description">
+                        La motorisation de portail représente une révolution dans la gestion de l'accès à votre propriété, offrant une série d'avantages qui allient praticité, sécurité et confort. Cette technologie moderne transforme votre quotidien
+                        et renforce la protection de votre domicile de manière significative.
+                        L'un des principaux avantages de la motorisation de portail est la commodité.
+                    </p>
+                    <a href="pages/motorisation.html" class="learn-more">Lire plus</a>
+                </div>
+                <span class="circle-before"></span>
+            </div>
+
+            <div class="single-service">
+                <div class="content">
+                    <span class="icon">GLS</span>
+                    <h3 class="title">CONTRÔLE D'ACCES</h3>
+                    <p class="description">
+                        Gérez facilement les droits d'accès des employés, intérimaires, visiteurs, prestataires…
+                        Supprimez les problèmes liés aux clés. Par exemple, une clé perdue peut devenir un vrai cauchemar de sécurité.
+                        Personnalisez les niveaux d'accès de chaque personne (quelles portes, quels jours, quelles heures).
+                        Profitez d'un reporting et de notifications personnalisées sur l'utilisation des badges...
+                    </p>
+                    <a href="pages/controle.html" class="learn-more">Lire plus</a>
+                </div>
+                <span class="circle-before"></span>
+            </div>
+
+            <div class="single-service">
+                <div class="content">
+                    <span class="icon">GLS</span>
+                    <h3 class="title">FORMATION</h3>
+                    <p class="description">
+                        La formation continue pour les jeunes à l'installation des équipements de sécurité représente une opportunité exceptionnelle d'acquérir des compétences 
+                        essentielles dans un domaine en constante évolution. Dans un monde où la sécurité est une préoccupation majeure, être formé à l'installation de systèmes de sécurité devient non seulement pertinent mais également crucial...
+                    </p>
+                    <a href="#" class="learn-more">Lire plus</a>
+                </div>
+                <span class="circle-before"></span>
+            </div>
+        </div>
+    </div>
+</section>
+  -->
+
+</body>
+</html>

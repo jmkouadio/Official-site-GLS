@@ -1,0 +1,259 @@
+
+.about {
+    padding: 20px;
+    background: #f9f9f9;
+    background-size: cover;
+}
+
+.about .row {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .column {
+    flex: 1;
+    min-width: 300px; /* Largeur minimale pour une bonne gestion sur petits écrans */
+    max-width: 48%;
+    text-align: center;
+}
+
+.about .column img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about h1 {
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #052151;
+    margin-bottom: 15px;
+}
+
+.about h5 {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.about h5 span {
+    color: #fb911f;
+    font-weight: bold;
+}
+
+.select-text{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#about-btn {
+    width: 150px;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+    background: #ffa500;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 550;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#about-btn:hover {
+    width: 170px;
+}
+
+
+
+.gallary {
+    font-size: 1.2rem;
+    padding: 20px;
+}
+
+.gallary h1 {
+    color: #365996;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallary p {
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.gallary .row {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.gallary .row img#cam-alarme{
+    max-width: 250px;
+}
+
+.gallary .card {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    background-color: #fff;
+    flex: 1;
+}
+
+.gallary .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.gallary .card img:hover {
+    transform: scale(0.9);
+}
+
+.gallary .card h3 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+
+.details_1 {
+    font-size: 1.2rem;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.details_1 h1 {
+    color: #052151;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.details_1 p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.details_1 span {
+    color: #365996;
+    font-weight: 700;
+}
+
+
+.details_1 .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.details_1 .text-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.details_1 .text-section h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.details_1 .text-section p {
+    font-size: 1.1rem;
+}
+
+.details_1 .image-section {
+    flex: 1;
+    text-align: center;
+    max-width: 400px;
+}
+
+.details_1 .image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .gallary .row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gallary .row img{
+        max-width: 300px;
+    }
+    .gallary .card {
+        max-width: 100%;
+    }
+    .gallary h1 {
+        font-size: 1.5rem;
+    }
+    .gallary p {
+        font-size: 1rem;
+    }
+
+   
+
+    .details_1 .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .details_1 .text-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .details_1 .text-section p {
+        font-size: 1rem;
+    }
+
+    .about .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about .column {
+        max-width: 100%;
+    }
+    .about h5 {
+        font-size: 0.9rem;
+    }
+
+    .about img{
+        max-width: 400px;
+    }
+
+    .about .main-txt h1{
+        font-size: 1.2rem;
+    }
+
+    .about .container .img-size{
+        max-width: 400px;
+    }
+}
+
+
+@media (max-width: 480px) {
+   
+    
+    .details_1 h1 {
+        font-size: 1.2rem;
+    }
+
+    .details_1 p {
+        font-size: 0.9rem;
+    }
+}

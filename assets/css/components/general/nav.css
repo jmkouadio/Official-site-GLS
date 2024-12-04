@@ -1,0 +1,230 @@
+nav{
+   
+    position: sticky;
+    top: 0;
+    background-color: var(--main-color-white);
+    box-shadow: 2px 8px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.nav-container{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-container ul li a{
+    display: block;
+    padding: 15px 10px;
+    height: 30px;
+    line-height: 30px;
+    border-top: 2px solid var(--main-color-white);
+    border-bottom: 2px solid var(--main-color-white);
+}
+
+.nav-container ul li a i{
+    float: right;
+    position: relative;
+    top: 8px;
+    font-size: 0.8rem;
+}
+
+.nav-container ul li a #chevron-droit:hover{
+    color: var(--main-color-white);
+}
+
+.nav-container ul li a:hover{
+    color: var(--main-color);
+    border-top: 2px solid orangered;
+}
+
+.nav-container ul li a.active{
+    border-top: 2px solid var(--main-color);
+    background-color: var(--main-color-orange);
+    color: var(--main-color-white);
+}
+
+.nav-container ul li:hover ul{
+    display: block;
+}
+
+.nav-container ul li:hover .mega-sub-menu{
+    display: flex;
+}
+
+/*-------------- SUB NAV ----------------------*/
+
+.sub-nav{
+    background-color: var(--main-color-white);
+    white-space: nowrap;
+    min-width: 200px;
+}
+
+.sub-nav li a:hover{
+    background-color: var(--main-color);
+    color: var(--main-color-white) !important;
+}
+
+.sub-nav .sub-nav{
+    left: 100%;
+    top: 0;
+    display: none !important;
+}
+
+.sub-nav li:hover .sub-nav{
+    display: block !important;
+}
+
+
+/*-------------- MEGA SUB MENU ----------------------*/
+
+.mega-sub-menu{
+    background-color: var(--main-color-white);
+    display: none;
+}
+
+.mega-sub-menu .mega-item{
+    min-width: 250px;
+    padding: 20px 10px;
+    border-right: 0.1px solid var(--main-color-gray);
+}
+
+.mega-sub-menu .mega-item h3{
+    padding: 0 10px;
+    margin-bottom: 5px;
+    color: var(--main-color-orange);
+}
+
+.mega-sub-menu .mega-item a{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: var(--main-color-black);
+    border: none;
+}
+
+.mega-sub-menu .mega-item a:hover{
+    border: none;
+}
+
+.mega-sub-menu .mega-item:nth-child(3){
+    border: none;
+}
+
+.mega-sub-menu .mega-item img{
+    width: 100%;
+    height: 380px;
+}
+
+.mega-sub-menu .mega-item .mega-item-content{
+    top: 20px;
+    right: 20px;
+}
+
+.mega-sub-menu .mega-item button{
+    bottom: 20px;
+    left: 30%;
+    background-color: var(--main-color-danger);
+    font-size: 1.3rem;
+    color: var(--main-color-white);
+    text-transform: uppercase;
+    padding: 10px 0;
+    border-radius: 30px;
+    border: 1px solid var(--main-color-danger);
+}
+
+.mega-sub-menu .mega-item button a{
+    font-size: 18px;
+    color: var(--main-color-white);
+}
+
+.mega-sub-menu .mega-item button:hover a{
+    color: var(--main-color-white);
+}
+
+.mega-sub-menu .mega-item .mega-item-content span{
+    font-size: 2rem;
+}
+
+.mega-sub-menu .mega-item .mega-item-content h4{
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.mega-sub-menu .mega-item .mega-item-content h3{
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+/***************** RESPONSIVE ****************/
+
+
+@media (max-width: 768px) {
+
+    nav {
+        display: none;
+        font-size: 14px; /* Réduction de la taille de police */
+    }
+
+    nav.active {
+        display: block; /* Afficher le nav lorsqu'il est actif */
+    }
+
+    .nav-container {
+      font-size: 0.8rem;
+    }
+
+    .nav-container .nav-right .devis-perso{
+        margin-right: 12px;
+    }
+
+   
+  
+    .nav-container ul li a {
+      padding: 10px 5px;
+      height: 25px;
+      line-height: 25px;
+    }
+  
+    .nav-container ul li a i {
+      top: 6px;
+      font-size: 0.6rem;
+    }
+  
+    .mega-sub-menu .mega-item h3 {
+      font-size: 0.9rem;
+    }
+  
+    .mega-sub-menu .mega-item a {
+      font-size: 0.8rem;
+    }
+  
+    .mega-sub-menu .mega-item img {
+      height: 250px;
+    }
+  
+    .mega-sub-menu .mega-item .mega-item-content span {
+      font-size: 1.5rem;
+    }
+  
+    .mega-sub-menu .mega-item .mega-item-content h4 {
+      font-size: 2rem;
+    }
+  
+    .mega-sub-menu .mega-item .mega-item-content h3 {
+      font-size: 2.5rem;
+    }
+  
+    .mega-sub-menu .mega-item button {
+      font-size: 1rem;
+      padding: 8px 0;
+    }
+  
+    .mega-sub-menu .mega-item button a {
+      font-size: 14px;
+    }
+
+     /* Masquer les éléments avec la classe notaffiche */
+     .notaffiche {
+        display: none;
+    }
+    
+  }

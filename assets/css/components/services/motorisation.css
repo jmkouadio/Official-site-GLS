@@ -1,0 +1,105 @@
+/* motorisation Section Start */
+.motorisation {
+    width: 100%;
+    height: 70vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url(../../../images/motorisation/motorisation7.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.motorisation .content {
+    color: white;
+    padding: 20px;
+}
+
+.motorisation .content h5 {
+    font-size: 2rem;
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 15px;
+}
+
+.motorisation .content h4 {
+    font-size: 3rem;
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+    margin-top: 10px;
+}
+
+.changecontent::after {
+    content: ' ';
+    color: #ffa500;
+    text-shadow: 0px 1px 1px black;
+    animation: changetext 10s infinite linear;
+}
+
+@keyframes changetext {
+    0% { content: "Ip"; }
+    10% { content: "Alarme"; }
+    30% { content: "HDCVI"; }
+    50% { content: "Sans fil"; }
+    70% { content: "Espion"; }
+    100% { content: "Xiaomi"; }
+}
+
+.motorisation .content a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgb(197, 9, 9);
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 550;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+    margin-top: 20px;
+}
+
+.motorisation .content a:hover {
+    background: #ffa500;
+    color: white;
+}
+
+
+
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    
+    .motorisation {
+        height: 60vh;
+    }
+
+    .motorisation .content h5 {
+        font-size: 1.5rem;
+    }
+
+    .motorisation .content h4 {
+        font-size: 2.5rem;
+    }
+
+   
+}
+
+
+@media (max-width: 480px) {
+    .motorisation {
+        height: 50vh;
+    }
+
+    .motorisation .content h5 {
+        font-size: 1.2rem;
+    }
+
+    .motorisation .content h4 {
+        font-size: 2rem;
+    }
+    
+   
+}

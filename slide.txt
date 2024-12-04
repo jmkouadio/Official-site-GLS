@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    width: 600%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 16.666%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Navigation Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Dots Navigation */
+.dots-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+/* Optional: Add content styling */
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slide-content h2 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.slide-content p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.shop-now {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.shop-now:hover {
+    background-color: #333;
+}
+</style>
+</head>
+<body>
+
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide">
+            <img src="/api/placeholder/1200/500" alt="Slide 1">
+            <div class="slide-content">
+                <h2>70% de réduction</h2>
+                <p>Ici tout est moins chère<br>Profite maintenant !</p>
+                <p>STARTING AT $19.99</p>
+                <a href="#" class="shop-now">SHOP NOW</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="/api/placeholder/1200/500" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="/api/placeholder/1200/500" alt="Slide 3">
+        </div>
+        <div class="slide">
+            <img src="/api/placeholder/1200/500" alt="Slide 4">
+        </div>
+        <div class="slide">
+            <img src="/api/placeholder/1200/500" alt="Slide 5">
+        </div>
+        <div class="slide">
+            <img src="/api/placeholder/1200/500" alt="Slide 6">
+        </div>
+    </div>
+
+    <button class="slider-btn prev">&#10094;</button>
+    <button class="slider-btn next">&#10095;</button>
+
+    <div class="dots-container">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</div>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+const slider = document.querySelector('.slider');
+const totalSlides = slides.length;
+
+// Auto slide function
+function autoSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlider();
+}
+
+// Start auto sliding
+let slideInterval = setInterval(autoSlide, 5000); // Change slide every 5 seconds
+
+// Update slider position and dots
+function updateSlider() {
+    slider.style.transform = `translateX(-${currentSlide * (100 / totalSlides)}%)`;
+    
+    // Update dots
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentSlide].classList.add('active');
+}
+
+// Manual navigation with buttons
+document.querySelector('.prev').addEventListener('click', () => {
+    clearInterval(slideInterval); // Reset timer when manually navigating
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlider();
+    slideInterval = setInterval(autoSlide, 5000); // Restart auto sliding
+});
+
+document.querySelector('.next').addEventListener('click', () => {
+    clearInterval(slideInterval);
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlider();
+    slideInterval = setInterval(autoSlide, 5000);
+});
+
+// Dot navigation
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        clearInterval(slideInterval);
+        currentSlide = index;
+        updateSlider();
+        slideInterval = setInterval(autoSlide, 5000);
+    });
+});
+
+// Optional: Pause auto-sliding when hovering over the slider
+document.querySelector('.slider-container').addEventListener('mouseenter', () => {
+    clearInterval(slideInterval);
+});
+
+document.querySelector('.slider-container').addEventListener('mouseleave', () => {
+    slideInterval = setInterval(autoSlide, 5000);
+});
+</script>
+
+</body>
+</html>

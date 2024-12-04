@@ -1,0 +1,69 @@
+
+.cloture{
+    width: 100%;
+    height: 70vh;
+    background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.8)), url(../../../images/cloture/cloture1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cloture .content {
+    color: white;
+    padding: 20px;
+}
+
+.cloture .content h5 {
+    font-size: 2rem;
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 15px;
+}
+
+.cloture .content h4 {
+    font-size: 3rem;
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+    margin-top: 10px;
+}
+
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    
+    .cloture{
+        height: 60vh;
+    }
+
+    .cloture .content h5 {
+        font-size: 1.5rem;
+    }
+
+    .cloture .content h4 {
+        font-size: 2.5rem;
+    }
+
+   
+}
+
+
+@media (max-width: 480px) {
+    .cloture{
+        height: 50vh;
+    }
+
+    .cloture .content h5 {
+        font-size: 1.2rem;
+    }
+
+    .cloture .content h4 {
+        font-size: 2rem;
+    }
+    
+   
+}

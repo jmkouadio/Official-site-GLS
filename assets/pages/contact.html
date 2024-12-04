@@ -1,0 +1,360 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="../css/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Jstore Ecommerce</title>
+</head>
+
+<body>
+    <div id="progress"></div>
+    <header>
+        <div class="banner-promo-container tc aic">
+            <div class="container">
+                <div class="banner-promo py-15">
+                    <i class="fa-solid fa-phone"></i> <a href="tel:+2250758904284">+2250758904284</a> |
+                    Sécurisez vos espaces avec des solutions de surveillance avancées |
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="website-details-container ">
+            <div class="container">
+                <div class="website-details aic flex gap-10">
+                    <h2 id="responsiveContent"><a href="../../index.html"><img src="../../logo gls90.png" alt="logo" id="img-not"></a></h2>
+                    <div class="website-logo logo">
+                        <h2 class="menu-toggle"><i class="fa-solid fa-bars menu"></i></h2>
+                    </div>
+                    <div class="website-search-bar flex flex-1 px-20">
+                    
+                        <div class="search-icon flex aic jcc">
+                            <i class="fa-solid fa-handshake-simple"></i>
+                        </div>
+                    </div>
+                    <div class="website-call-us flex aic gap-10">
+                        <div class="call-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="call-message">
+                            <h3>CONTACTEZ-NOUS</h3>
+                            <a href="tel:+2250507208790">Cel: +225 0507208790</a>
+                        </div>
+                    </div>
+                    <div class="website-search-icon flex gap-10">
+                        <div class="website-icon-item">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div class="website-icon-item">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
+                        <div class="website-icon-item">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="website-icon-item">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="nav-container flex jcsb">
+                <div class="nav-left">
+                    <ul class="flex gap-10">
+                        <li class="notaffiche"><a href="../../index.html"><img src="../../logo gls90.png" alt=""></a></li>
+                        <li><a href="../../index.html">HOME</a></li>
+
+                        <li class="relative">
+                            <a href="#">SERVICES <i class="fa-solid fa-chevron-down"></i></a>
+                            <div class="mega-sub-menu absolute flex box">
+                                <div class="mega-item">
+                                    <h3>Nos services</h3>
+                                    <ul>
+                                        <li><a href="videosurveillance.html">vidéosurveillance</a></li>
+                                        <li><a href="controle.html">Contrôle d'accès</a></li>
+                                        <li><a href="alarme.html">Alarme anti-intrusion</a></li>
+                                        <li><a href="cloture.html">Cloture électrique</a></li>
+                                        <li><a href="motorisation.html">Motorisation de portail</a></li>
+                                        <li><a href="formation.html">Formation</a></li>
+                                       
+
+                                    </ul>
+                                </div>
+                                <div class="mega-item relative notaffiche">
+                                    <img src="../images/imgsite/controle4.png" alt="">
+
+                                    
+                                </div>
+                                <div class="mega-item relative notaffiche">
+                                    <div class="mega-item-content absolute">
+                                        <span>Client</span>
+                                        <div>
+                                            <h4>satisfait</h4>
+                                            <h3>99%</h3>
+                                        </div>
+
+                                    </div>
+                                    <img src="../images/imgsite/hik3.jpg" alt="">
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section>
+        <form id="contactForm" class="contact-form">
+            <h1>DEMANDER UN DEVIS </h1>
+            <div class="form-group">
+                <label for="ville">Ville /commune... *</label>
+                <input type="text" id="ville" ville="ville" placeholder="Votre emplacement" required>
+                <span class="error-message"></span>
+            </div>
+    
+            <div class="form-group">
+                <label for="name">Nom complet ou nom de l'entreprise *</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+                <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact *</label>
+                <input type="text" id="contact" name="contact" placeholder="Votre contact" required>
+                <span class="error-message"></span>
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+                <span class="error-message"></span>
+            </div>
+    
+            <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="8" placeholder="Votre message ici" required></textarea>
+                <span class="error-message"></span>
+            </div>
+    
+            <div class="form-group-button">
+                <button type="submit" id="submitBtn">Envoyer</button>
+            </div>
+        </form>
+    </section>
+    
+
+    <section class="accompagnement">
+        <div class="container">
+            <div class="header">
+                <h1>NOUS VOUS ACCOMPAGNONS DANS TOUT</h1>
+                <p class="subtitle">Nous nous chargons de faire le nécessaire pour garantir une fiabilité</p>
+            </div>
+
+            <div class="content-wrapper">
+                <div class="steps-list">
+                    <div class="step-item active" data-step="audit">
+                        <span class="step-number">1.</span>
+                        <span class="step-title">Audit</span>
+                        <span class="arrow">→</span>
+                    </div>
+                    <div class="step-item" data-step="conception">
+                        <span class="step-number">2.</span>
+                        <span class="step-title">Conception</span>
+                        <span class="arrow">→</span>
+                    </div>
+                    <div class="step-item" data-step="installation">
+                        <span class="step-number">3.</span>
+                        <span class="step-title">Installation</span>
+                        <span class="arrow">→</span>
+                    </div>
+                    <div class="step-item" data-step="service">
+                        <span class="step-number">4.</span>
+                        <span class="step-title">Mise en service</span>
+                        <span class="arrow">→</span>
+                    </div>
+                    <div class="step-item" data-step="formation">
+                        <span class="step-number">5.</span>
+                        <span class="step-title">Formation</span>
+                        <span class="arrow">→</span>
+                    </div>
+                    <div class="step-item" data-step="maintenance">
+                        <span class="step-number">6.</span>
+                        <span class="step-title">Maintenance</span>
+                        <span class="arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="step-content">
+                    <div class="step-details active" id="audit">
+                        <h2>Audit</h2>
+                        <p>
+                            Nous réalisons un audit complet de vos besoins et de votre infrastructure actuelle pour
+                            évaluer les solutions les plus adaptées. Cette analyse approfondie,
+                            nous permet d’identifier les solutions adaptées et d’optimiser les performances futures de votre infrastructure.
+                        </p>
+                    </div>
+                    <div class="step-details" id="conception">
+                        <h2>Conception</h2>
+                        <p>
+                            Notre équipe conçoit des solutions sur mesure, répondant précisément aux besoins identifiés
+                            lors de l’audit.
+                            Nous élaborons des systèmes robustes, évolutifs et parfaitement alignés avec vos objectifs.
+                        </p>
+                    </div>
+                    <div class="step-details" id="installation">
+                        <h2>Installation</h2>
+                        <p>
+                            Nous assurons une installation professionnelle de votre infrastructure, 
+                            en respectant les normes de sécurité et en garantissant la compatibilité de chaque composant. 
+                            Nous veillons à une mise en place sans interruption pour vos opérations.
+                        </p>
+                    </div>
+                    <div class="step-details" id="service">
+                        <h2>Mise en service</h2>
+                        <p>
+                            Une fois l’installation terminée, nous procédons à la mise en service de l’équipement en vérifiant son bon fonctionnement.
+                             Des tests rigoureux sont effectués pour garantir que tout est opérationnel dès le premier jour
+                        </p>
+                    </div>
+                    <div class="step-details" id="formation">
+                        <h2>Formation</h2>
+                        <p>
+                            Nous offrons des sessions de formation adaptées aux utilisateurs pour assurer une prise en main rapide et efficace. 
+                            Nos formateurs qualifiés vous accompagnent dans la maîtrise des nouveaux outils pour un usage optimal.
+                        </p>
+                    </div>
+                    <div class="step-details" id="maintenance">
+                        <h2>Maintenance</h2>
+                        <p>
+                            Notre service de maintenance préventive et corrective garantit la pérennité de votre infrastructure. 
+                            Nous intervenons rapidement en cas de problème et réalisons des vérifications régulières pour minimiser les interruptions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+
+    </section>
+
+    <section class="pub-banner-container py-30">
+        <div class="container">
+            <h2 class="title">Pourquoi nous faire confiance ?</h2>
+            <div class="pub-banner flex jcsb">
+                <div class="pub-item">
+                    <div class="pub-item-icon"><i class="fa-solid fa-people-group"></i></div>
+                    <div class="pub-item-title">
+                        <h2>satisfaction clientèle</h2>
+                    </div>
+
+                    <div class="pub-item-details pb-5">
+                        Nous plaçons la satisfaction de nos clients au cœur de nos priorités. Grâce à une approche
+                        personnalisée et un engagement sans faille,
+                        nous construisons des relations de confiance et veillons à répondre à chaque besoin avec
+                        efficacité et professionnalisme
+                    </div>
+                </div>
+                <div class="pub-item">
+                    <div class="pub-item-icon"><i class="fa-solid fa-wrench"></i></div>
+                    <div class="pub-item-title">
+                        <h2>Garantie du matériel</h2>
+                    </div>
+
+                    <div class="pub-item-details pb-5">
+                        Nous garantissons des équipements de qualité supérieure, accompagnés d’une garantie qui témoigne
+                        de notre engagement envers la durabilité et la performance.
+                    </div>
+                </div>
+                <div class="pub-item">
+                    <div class="pub-item-icon"><i class="fa-solid fa-headphones"></i></div>
+                    <div class="pub-item-title">
+                        <h2>Disponible 24h/24-7j/7</h2>
+                    </div>
+
+                    <div class="pub-item-details pb-5">
+                        Notre équipe est disponible à tout moment, 24 heures sur 24 et 7 jours sur 7, pour vous offrir
+                        un soutien rapide et efficace.
+                        Que ce soit pour une assistance technique ou pour répondre à une demande urgente, vous pouvez
+                        compter sur nous, jour et nuit.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bouton de retour en haut -->
+    <button onclick="topFunction()" id="backToTopBtn" title="Retour en haut">↑</button>
+
+    <footer id="foot">
+        <div class="footer-col">
+            <h4>Contactez-nous</h4>
+            <ul>
+                <li><a title="Cliquez pour nous écrire !" href="mailto:gls.ciabj@gmail.com">
+                    glorysecurityservices.com
+                </a></li>
+                <li><a title="Cliquez pour nous appeler !" href="tel:+2250507208790">Cel: (+225) 05 07 20 87 90</a></li>
+                <li><a title="Cliquez pour nous appeler !" href="tel:+2252722495191">Tél: (+225) 27 22 49 51 91</a></li>
+                <li class="nopointer"><a title="Notre emplacement" href="#foot">Cocody, Angré carrefour des Oscars</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Secrétariat</h4>
+            <ul class="nopointer">
+                <li><a title="Nos horaires" href="#foot">Horaire : 07h30-12h00</a></li>
+                <li><a title="Nos horaires" href="#foot">13h30-17h00</a></li>
+                <li><a title="Notre disponibilité" href="#foot">Assistance Technique : 24h/24 et 7j/7</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Liens utiles</h4>
+            <ul>
+                <li><a title="Demandez un devis" href="#foot">Devis gratuit</a></li>
+                <li><a title="Nos formations" href="#foot">Formation</a></li>
+                <li><a title="La société" href="#foot">La société</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Suivez-nous</h4>
+            <div class="links">
+                <a title="Page LinkedIn" href="#foot"><i class="fab fa-linkedin"></i></a>
+                <a title="Page Facebook" href="#foot"><i class="fab fa-facebook"></i></a>
+                <a title="WhatsApp" href="#foot"><i class="fab fa-whatsapp"></i></a>
+                <a title="Page Twitter" href="#foot"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-row">
+            <p>&copy; 2025 Glory Security Services. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../js/accompagnement.js"></script>
+    <script src="../js/btn-up.js"></script>
+    <script src="../js/progress.js"></script>
+    <script src="../js/reveal-script/reveal.js"></script>
+    <script src="../js/reveal-script/reveal2.js"></script>
+    <script src="../js/menu-toogle.js"></script>
+
+</body>

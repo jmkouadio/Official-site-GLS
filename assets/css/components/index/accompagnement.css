@@ -1,0 +1,210 @@
+.accompagnement .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background-color: var(--main-color);
+    /*background-color: rgba(235, 83, 20,0.1);*/
+    color: white;
+  }
+
+  .accompagnement .container .header {
+    margin-bottom: 3rem;
+  }
+
+  .accompagnement .container .header h1 {
+    text-align: center;
+    color: var(--main-color-white);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .accompagnement .container  .subtitle {
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .accompagnement .container .content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+
+  .accompagnement .container  .steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .accompagnement .container  .step-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .accompagnement .container .step-item:hover {
+    background-color: var(--main-color-orange);
+  }
+
+  .step-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+
+
+  .step-item.active{
+    background-color: var(--main-color-orange);
+  }
+  .step-item.active .step-number {
+    color: var(--main-color-black);
+  }
+
+  .step-title {
+    font-size: 1.2rem;
+  }
+
+  .arrow {
+    margin-left: auto;
+    color: var(--main-color-white);
+  }
+
+  .step-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    position: relative;
+    min-height: 300px;
+  }
+
+  .step-details {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .step-details.active {
+    display: block;
+    opacity: 1;
+  }
+
+  .step-details h2 {
+    color: var(--main-color-orange);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .step-details p{
+    font-size: 1.2rem;
+    color: black;
+  }
+
+  .cta-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: var(--main-color-danger);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: #b91c1c;
+  }
+
+  @media (max-width: 768px) {
+    .accompagnement .container {
+      max-width: 760px;
+      padding: 0;
+      background-color: var(--main-color);
+    }
+  
+    .accompagnement .container .header {
+      padding: 1rem;
+      margin-bottom: 0;
+    }
+  
+    .accompagnement .container .header h1 {
+      font-size: 2rem;
+    }
+  
+    .accompagnement .container .content-wrapper {
+      grid-template-columns: 1fr;
+    }
+  
+    .accompagnement .container .steps-list {
+      gap: 0;
+      font-size: 18px;
+    }
+  
+    .accompagnement .container .step-item {
+      background-color: #1a1a1a;
+      padding:5px;
+      gap: 1rem;
+      position: relative;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  
+    .accompagnement .container .step-number {
+      color: var(--main-color-white);
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  
+    .accompagnement .container .step-title {
+      font-size: 1rem;
+      color: white;
+    }
+  
+    .accompagnement .container .arrow {
+      display: none;
+    }
+  
+    .accompagnement .container .step-content {
+      background-color: transparent;
+      padding: 0;
+      border-radius: 0;
+      min-height: auto;
+      font-size: 14px;
+    }
+  
+    .step-details {
+      display: none;
+      background-color: var(--main-color);
+      padding: 0; /* Aligner le texte avec le titre */
+    }
+  
+    .step-details.active {
+      display: block;
+    }
+  
+    .step-details h2{
+      display: block;
+      color: var(--main-color-white);
+    }
+  
+    .step-details p {
+      color: black;
+      opacity: 1;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .accompagnement .container .step-item.active {
+      background-color: #1a1a1a;
+    }
+  
+    .cta-button {
+      margin: 2rem 1.5rem;
+      width: calc(100% - 3rem);
+    }
+  }

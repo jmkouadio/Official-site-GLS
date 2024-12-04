@@ -1,0 +1,64 @@
+/* Style général pour la section de présentation de l'entreprise */
+
+.company-info {
+    margin: 10px;
+    display: flex;
+    align-items: stretch;
+}
+
+.company-info h2{
+    font-size: 1.7rem;
+    text-align: center;
+    color: var(--main-color-orange);
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.company-info p{
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+
+.company-info p span{
+    color: var(--main-color);
+}
+
+.company-info p .devis{
+    color: white;
+    border: 1px solid var(--main-color-danger);
+    height: 50px;
+    padding: 10px;
+    background-color: var(--main-color-danger);
+    float: right;
+}
+
+.company-info p .devis a{
+    font-size: 1.1rem;
+}
+
+.info {
+    width: 50%;
+    padding: 10px;
+    background-color: #f7f7f7;
+}
+
+#map {
+    width: 60%;
+    height: 500px;
+}
+
+
+
+/* Style pour les petits écrans */
+@media screen and (max-width: 920px) {
+    .info {
+        width: 100%; /* Prendre toute la largeur */
+    }
+
+    #map {
+        display: none; /* Cacher la carte */
+    }
+}
