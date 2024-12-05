@@ -131,6 +131,10 @@
        
     }
 
+    .website-details .ps-fixed{
+        position: fixed;
+    }
+
 
 
     .website-details #img-not{
