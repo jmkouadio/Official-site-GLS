@@ -21,10 +21,18 @@ i:hover{
 }
 
 @media screen and (max-width:480px) {
-    body{
+    html, body{
         margin: 0;
         padding: 0;
         overflow-x: hidden;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    .container{
+        max-width: 100%;
     }
     
 }

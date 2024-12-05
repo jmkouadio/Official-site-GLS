@@ -17,7 +17,7 @@ label {
     
 }
 
-input[type="text"], select, textarea {
+input[type="text"],[type="email"],[type="number"], select, textarea {
     font-family: 'Poppins', sans-serif;
     width: 100%;
     padding: 10px;
@@ -29,17 +29,18 @@ input[type="text"], select, textarea {
     box-sizing: border-box;
 }
 
-input[type="email"] {
-    font-family: 'Poppins', sans-serif;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    color: black;
-    box-sizing: border-box;
+
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Pour Firefox */
+}
+
 
 textarea {
     resize: vertical;
